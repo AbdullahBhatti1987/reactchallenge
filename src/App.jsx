@@ -45,7 +45,8 @@ function App() {
 
   return (
     <>
-      <div className="flex gap-3 items-center justify-between p-5 mt-6 mb-3 border-4 w-10/12 m-auto">
+      <div className="flex justify-center bg-white w-10/12 m-auto mt-3 rounded-lg"><h1 className="text-3xl p-3">Color Box Challenge</h1></div>
+      <div className="flex gap-3 items-center justify-between p-5 mt-3 mb-3 border-4 w-10/12 m-auto bg-white rounded-lg">
         <div className="flex gap-2 items-center">
           <label htmlFor="statustext">Status Text</label>
           <input
@@ -89,14 +90,14 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 items-center p-5 pt-10 border-4 w-10/12 m-auto">
+      <div className="flex flex-wrap gap-3 items-center p-5 pt-10 border-4 w-10/12 m-auto bg-white rounded-lg ">
         {boxes.map((box) => (
           <div
             key={box.id}
-            className="relative w-48 h-48 border-4 rounded-xl flex justify-center items-center"
+            className="relative w-48 h-48 border-4 rounded-xl flex justify-center items-center  animate-bounce -translate-y-6 "
             style={{ backgroundColor: box.bgColor }}
           >
-            <h1 className="text-6xl" style={{ color: box.textColor }}>
+            <h1 className="text-4xl" style={{ color: box.textColor }}>
               {box.status}
             </h1>
             <p className="absolute end-2 bottom-2" style={{ color: box.textColor }}>{box.time}s</p>
